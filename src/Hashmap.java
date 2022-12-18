@@ -1,18 +1,14 @@
 import java.util.HashMap;
 import java.util.LinkedList;
 
-/**
- * 
- */
 
 /**
- * @author LAP-10
- *
+ * This program is for practicing hashmap and linkedlist
  */
 public class Hashmap {
 
 	/**
-	 * @param args
+	 * the main shows how we can initialize and work with hashmap and linkedlist
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
