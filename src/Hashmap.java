@@ -13,7 +13,7 @@ public class Hashmap {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("working of a hashmap");
+		System.out.println("working with hashmap");
 		HashMap<String, String> developerinfo = new HashMap<String, String>(); 
 		
 		developerinfo.put("name", "fatema");
@@ -24,7 +24,7 @@ public class Hashmap {
 		System.out.println(name);
 		System.out.println();
 		
-		System.out.println("working of a LinkedList");
+		System.out.println("working with LinkedList");
 		
 		
 		LinkedList<String> listofNameLinkedList = new LinkedList<String>();
