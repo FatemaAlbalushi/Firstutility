@@ -1,1 +1,1 @@
-TMD: This is my readme file
+This project will be used to calculate the number of vowel letter in sentence entered by user using the normal way and the hashmap
