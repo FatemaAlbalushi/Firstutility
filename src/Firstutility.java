@@ -19,7 +19,8 @@ public class Firstutility {
 		// find the largest element in an array, second largest and third largest
 
 		System.out.println("------------------------ Largest number---------------------------------");
-		int[] arr = { 50, 12, -8, 10, 1001, -6, 87, 24 };
+		//int[] arr = { 50, 12, -8, 10, 1001, -6, 87, 24 };
+		int[] arr = { 17,4,5,7,8};
 		int[] new_arr = new int[3];
 		new_arr = SLargest(arr);
 
@@ -47,9 +48,9 @@ public class Firstutility {
 	public static int[] SLargest(int[] number) {
 
 		int[] new_arr = new int[3];
-		int max = number[0]; // The largest element
-		int smax = number[0]; // The Second largest element
-		int thmax = number[0]; // The Third largest element
+		int max = -1; // The largest element
+		int smax = -1; // The Second largest element
+		int thmax = -1; // The Third largest element
 
 		for (int j = 0; j < number.length; j++) {
 			if (number[j] > max) {
@@ -57,10 +58,14 @@ public class Firstutility {
 			}
 			if (number[j] > smax && number[j] < max ) {
 				smax = number[j];
-			}
-			if (number[j] > thmax && number[j] < smax ) {
-				thmax = number[j];
-			}
+			
+		}
+		}
+		for (int i =0; i< number.length;i++)  {
+			
+		if (number[i] > thmax && number[i] < smax ) {
+			thmax = number[i];
+		}
 		}
 
 		new_arr[0] = max;

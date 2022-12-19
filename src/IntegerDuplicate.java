@@ -61,7 +61,10 @@ public class IntegerDuplicate {
 			  }
 		
 		for( Entry<Integer, Integer> entry : doub.entrySet() ){
-		    System.out.println( "The number "+entry.getKey() + " is repeted  " + entry.getValue() + " times" );
+			if(entry.getValue()>1) {
+			    System.out.println( "The number "+entry.getKey() + " is repeted  " + entry.getValue() + " times" );
+
+			}
 		}
 
 	}
