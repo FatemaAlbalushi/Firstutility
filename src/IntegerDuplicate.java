@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -60,13 +61,20 @@ public class IntegerDuplicate {
 			    	  doub.put(number[i], 1);
 			  }
 		
-		for( Entry<Integer, Integer> entry : doub.entrySet() ){
-			if(entry.getValue()>1) {
-			    System.out.println( "The number "+entry.getKey() + " is repeted  " + entry.getValue() + " times" );
-
-			}
-		}
-
+//		for( Entry<Integer, Integer> entry : doub.entrySet() ){
+//			if(entry.getValue()>1) {
+//			    System.out.println( "The number "+entry.getKey() + " is repeted  " + entry.getValue() + " times" );
+//
+//			}
+//		}
+       
+	  for (int occer:doub.keySet()) {
+		  if (doub.get(occer)>1) {
+			  System.out.println( "The number "+doub.get(occer) + " is repeted  " + occer + " times" );
+			  
+			  
+		  }
+	  }
 	}
 	
 
