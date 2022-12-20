@@ -20,34 +20,39 @@ public class IntegerDuplicate {
 		System.out.println("------------------------Repitition---------------------------------"); 
 		
 		
-		int [] number= {1,2,3,4,2,4,4,4};
+		int [] number= {101,88,3,65,6,3,0,0,88,88};
 		int count=0;
 		
-        int[] repetition = new int[number.length];
-        int counter = 0; 
+        //int[] repetition = new int[number.length];
+        //int counter = 0; 
         for (int i = 0; i < number.length; i++) {
-            boolean different = false;
+            //boolean different = false;
+        	     
             for (int j = 0; j < i; j++) {
                 if (number[i] == number[j]) {
-                	different = true;
-                    break;
+                	//different = true;
+                	count++;
+                	
+                	
+                	System.out.println( "The number "+ number[i] + " is repeted  " + count + " times");
+                    
                 }
             }
-            if (!different) {
-            	repetition[counter++] = number[i];
-            }
+            //if (!different) {
+          //  	repetition[counter++] = number[i];
+         //   }
         }
-        for (int i = 0; i < counter; i++) {
-            count = 0;
-            for (int j = 0; j < number.length; j++) {
-                if (repetition[i] == number[j]) {
-                    count++;
-                }
-
-            }
-            System.out.println( "The number "+ repetition[i] + " is repeted  " + count + " times");
-            
-        }
+//        for (int i = 0; i < counter; i++) {
+//            count = 0;
+//            for (int j = 0; j < number.length; j++) {
+//                if (repetition[i] == number[j]) {
+//                    count++;
+//                }
+//
+//            }
+//            System.out.println( "The number "+ repetition[i] + " is repeted  " + count + " times");
+//            
+//        }
         
         System.out.println("-------HashMap------");  
 
@@ -61,16 +66,10 @@ public class IntegerDuplicate {
 			    	  doub.put(number[i], 1);
 			  }
 		
-//		for( Entry<Integer, Integer> entry : doub.entrySet() ){
-//			if(entry.getValue()>1) {
-//			    System.out.println( "The number "+entry.getKey() + " is repeted  " + entry.getValue() + " times" );
-//
-//			}
-//		}
        
 	  for (int occer:doub.keySet()) {
 		  if (doub.get(occer)>1) {
-			  System.out.println( "The number "+doub.get(occer) + " is repeted  " + occer + " times" );
+			  System.out.println( "The number "+ occer+ " is repeted  " + doub.get(occer) + " times" );
 			  
 			  
 		  }

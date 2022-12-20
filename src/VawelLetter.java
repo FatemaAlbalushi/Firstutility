@@ -1,3 +1,4 @@
+import java.io.ObjectInputStream.GetField;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -62,29 +63,37 @@ public class VawelLetter {
 		vawelletter.put('e', 0);
 		int count = 0;
 
-		for (int i = 0; i < userinput.length(); i++) {
-			if (userinput.charAt(i) == 'i' || userinput.charAt(i) == 'I') {
-				vawelletter.put('i', vawelletter.get('i') + 1);
+//		for (int i = 0; i < userinput.length(); i++) {
+//			if (userinput.charAt(i) == 'i' || userinput.charAt(i) == 'I') {
+//				vawelletter.put('i', vawelletter.get('i') + 1);
+//				count++;
+//			}
+//			if (userinput.charAt(i) == 'o' || userinput.charAt(i) == 'O') {
+//				vawelletter.put('o', vawelletter.get('o') + 1);
+//				count++;
+//			}
+//			if (userinput.charAt(i) == 'u' || userinput.charAt(i) == 'U') {
+//				vawelletter.put('u', vawelletter.get('u') + 1);
+//				count++;
+//			}
+//			if (userinput.charAt(i) == 'a' || userinput.charAt(i) == 'A') {
+//				vawelletter.put('a', vawelletter.get('a') + 1);
+//				count++;
+//			}
+//			if (userinput.charAt(i) == 'e' || userinput.charAt(i) == 'E') {
+//				vawelletter.put('e', vawelletter.get('e') + 1);
+//				count++;
+//			}
+//		}
+//
+		for(char charcter:userinput.toCharArray()) {
+			if(vawelletter.get(charcter) !=null) {
+				vawelletter.put(charcter, vawelletter.get(charcter) + 1);
 				count++;
 			}
-			if (userinput.charAt(i) == 'o' || userinput.charAt(i) == 'O') {
-				vawelletter.put('o', vawelletter.get('o') + 1);
-				count++;
-			}
-			if (userinput.charAt(i) == 'u' || userinput.charAt(i) == 'U') {
-				vawelletter.put('u', vawelletter.get('u') + 1);
-				count++;
-			}
-			if (userinput.charAt(i) == 'a' || userinput.charAt(i) == 'A') {
-				vawelletter.put('a', vawelletter.get('a') + 1);
-				count++;
-			}
-			if (userinput.charAt(i) == 'e' || userinput.charAt(i) == 'E') {
-				vawelletter.put('e', vawelletter.get('e') + 1);
-				count++;
-			}
+			
 		}
-
+		
 		return count;
 
 	}
