@@ -17,13 +17,14 @@ public class MatchPair {
 		// TODO Auto-generated method stub
 
 		int[] arr = { 6, 7, 4, 3, 4, 5, 6 };
+		int [] arr1= {6,6,6,4,4,4};
 		int target = 10;
 
 		System.out.println("The Array with match pair is : " + Matchpair(arr, target));
 		System.out.println();
 
 		System.out.println("The Array with match pair is : ");
-		unigCharHm(arr, target);
+		unigCharHm(arr1, target);
 
 	}
 
