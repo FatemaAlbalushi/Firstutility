@@ -3,12 +3,12 @@ import java.util.HashMap;
 
 
 /**
- * This program for recurssion practice...
- *
+ * This program is about different function that we will practice recurssion using them.
  */
 public class practiceproblrm {
 
 	/**
+	 * @param args
 	 * the main will call 5 functions using the initilisation var.
 	 * 1. Evenodd function which will take array of numvers and return the hashmap which contain two array list one for even number and other one for odd number.
 	 * 2. power function which take the base and the exponantial and return the result.
@@ -39,12 +39,17 @@ public class practiceproblrm {
 		
 		System.out.println();
 		System.out.println("Check if the string is plaindrom");
-         palindrom(str1);;
+         palindrom(str);;
 		
 	}
 	
-	// method to chech the even and odd number from the array
+	/**
+	 * @param arrayInput : the array that contain  even and odd number.
+	 *  method to chech the even and odd number from the array
+	 */
+	
 	public static void EvenOdd(int[] arrayInput) {
+		// create 
 		HashMap<String,ArrayList<Integer>> evenosshashmap=new HashMap<>();
 		
 		ArrayList<Integer>even=new ArrayList<>();
@@ -64,19 +69,33 @@ public class practiceproblrm {
 		System.out.println( evenosshashmap);	
 	}
 	
-	
-	// method to return the power exponanial of an integer
+	/**
+	 * 
+	 * @param base
+	 * @param exponrnt
+	 *  method to return the power exponanial of an integer
+	 */
 	public static void power(int base ,int exponrnt) {
+		HashMap<String,Integer> resultOutput=new HashMap<>();
+		HashMap<Integer,Integer> input=new HashMap<>();
+		input.put(base, exponrnt);
+		
 		int result=1;
+		
 		for (;exponrnt!=0;exponrnt--) {
 			result *= base;
 		}
-		System.out.println(result);
+		resultOutput.put("result", result);
+		System.out.println(input);
+		System.out.println(resultOutput);
 	}
 	
 	
-	
-	// method to return the reverse of a string
+	/**
+	 * 
+	 * @param userstring: the input string which we went to find the reverse of it.
+	 * method to return the reverse of a string
+	 */
 	public static void reverseString(String userstring) {
 		
 		for(int character = userstring.length()-1;character >=0 ; character--) {
@@ -87,8 +106,11 @@ public class practiceproblrm {
 			
 	}
 	
-	
-	// method to return the factorail of an integer
+	/**
+	 * 
+	 * @param n : the number we passed to the function to find the 
+	 *  method to return the factorail of an integer
+	 */
 	public static void factorial(int n) {
 		int result=1;
 		for(int i=1;i<=n;i++) {
@@ -99,13 +121,17 @@ public class practiceproblrm {
 		System.out.println(result);	
 	}
 	
-	// method to chech if the string is pailndrom or not
+	/**
+	 * 
+	 * @param string: the string that we neeed to check if it's palindrom or not
+	 * method to chech if the string is pailndrom or not
+	 */
 	public static void palindrom(String string) {
 		
 		String revString="";
 		boolean palindrom=false;
 		
-		for(int index = string.length()-1;index >=0 ; index--) {
+		for(int index = string.length()-1;index >=0; index--) {
 			
 			revString+=string.charAt(index);
 		}
