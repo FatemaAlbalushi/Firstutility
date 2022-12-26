@@ -1,6 +1,8 @@
 
 import java.util.HashMap;
 
+import javax.print.DocFlavor.INPUT_STREAM;
+
 /**
  * 
  */
@@ -26,10 +28,13 @@ public class RecurssionPractice {
 		revString("fatma",4);
 		System.out.println();
 		System.out.println("---------------------------------------Print the increment nd decrement array ---------------------------------------");
-		pattrenIn(4);
+		pattrenIn(0,5);
 		System.out.println();
 		System.out.println("---------------------------------------Print the fibonacci of "+ n+"------------------------------------------------------");
 		System.out.println("Result "+fabonacci(n));
+		System.out.println();
+		System.out.println("---------------------------------------check if the string is plaindrom ------------------------------------------------------");
+		System.out.println("Result "+plaindrom("madam", 0));
 		
 
 	}
@@ -81,16 +86,28 @@ public class RecurssionPractice {
 	/**
 	 * @param number:the start and end number.
 	 *  to print the numbers starting from number till 0 incrementing and decremention
+	 * @return 
 	 */
-	public static void pattrenIn(int number) {
+	public static int pattrenIn(int number, int input) {
 		
-		if (number==1)
-			System.out.print(1);
+		if (number == input)
+			return 0;
 		else {
+			
 			System.out.print(number);
-		    pattrenIn(number-1);
+		    pattrenIn(number+1, input);
 			System.out.print(number);		
 		}	
+		return 0;
+	}
+	
+	public static boolean plaindrom(String str, int index) {
+		if (index> str.length()/2) {
+			return true;
+		}
+		return (str.charAt(index)==str.charAt(str.length()-(1+index))) && plaindrom(str, index+1);
+		
+		
 	}
 	
 	/**
@@ -104,6 +121,7 @@ public class RecurssionPractice {
 		else if (n==1)
 			return 1;
 		else {
+			//System.out.println();
 			return fabonacci(n-1)+fabonacci(n-2);
 		}
 		
