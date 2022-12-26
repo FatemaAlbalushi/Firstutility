@@ -20,6 +20,7 @@ public class RecurssionPractice {
 		// TODO Auto-generated method stub
 		int n=7;
 		
+		
 		System.out.println("---------------------------------------Print the the power result ---------------------------------------------------");
 		System.out.println("Result "+pow(2, 3));
 		System.out.println("---------------------------------------Print the factorial result ---------------------------------------------------");
@@ -28,7 +29,7 @@ public class RecurssionPractice {
 		revString("fatma",4);
 		System.out.println();
 		System.out.println("---------------------------------------Print the increment nd decrement array ---------------------------------------");
-		pattrenIn(0,5);
+		pattren(0,5);
 		System.out.println();
 		System.out.println("---------------------------------------Print the fibonacci of "+ n+"------------------------------------------------------");
 		System.out.println("Result "+fabonacci(n));
@@ -88,19 +89,26 @@ public class RecurssionPractice {
 	 *  to print the numbers starting from number till 0 incrementing and decremention
 	 * @return 
 	 */
-	public static int pattrenIn(int number, int input) {
+	public static int pattren(int number, int input) {
 		
 		if (number == input)
-			return 0;
+			return number;
 		else {
 			
 			System.out.print(number);
-		    pattrenIn(number+1, input);
-			System.out.print(number);		
+		    pattren(number+1, input);
+			System.out.print(number);
+			return number;
 		}	
-		return 0;
+		
 	}
 	
+	/**
+	 * 
+	 * @param str: the using input string to check if it's palindrom or not.
+	 * @param index to go throgh the index of the str.
+	 * @return true if the str is palindrom otherwise return false.
+	 */
 	public static boolean plaindrom(String str, int index) {
 		if (index> str.length()/2) {
 			return true;
