@@ -18,7 +18,7 @@ public class RecurssionPractice {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=7;
+		int n=8;
 		
 		
 		System.out.println("---------------------------------------Print the the power result ---------------------------------------------------");
@@ -32,7 +32,9 @@ public class RecurssionPractice {
 		pattren(0,5);
 		System.out.println();
 		System.out.println("---------------------------------------Print the fibonacci of "+ n+"------------------------------------------------------");
-		System.out.println("Result "+fabonacci(n));
+		for (int i=0; i<n;i++) {
+			System.out.print(" "+fabonacci(i));
+		}
 		System.out.println();
 		System.out.println("---------------------------------------check if the string is plaindrom ------------------------------------------------------");
 		System.out.println("Result "+plaindrom("madam", 0));
