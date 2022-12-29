@@ -19,8 +19,6 @@ public class RecurssionPractice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n=8;
-		
-		
 		System.out.println("---------------------------------------Print the the power result ---------------------------------------------------");
 		System.out.println("Result "+pow(2, 3));
 		System.out.println("---------------------------------------Print the factorial result ---------------------------------------------------");
@@ -105,20 +103,7 @@ public class RecurssionPractice {
 		
 	}
 	
-	/**
-	 * 
-	 * @param str: the using input string to check if it's palindrom or not.
-	 * @param index to go throgh the index of the str.
-	 * @return true if the str is palindrom otherwise return false.
-	 */
-	public static boolean plaindrom(String str, int index) {
-		if (index> str.length()/2) {
-			return true;
-		}
-		return (str.charAt(index)==str.charAt(str.length()-(1+index))) && plaindrom(str, index+1);
-		
-		
-	}
+	
 	
 	/**
 	 * 
@@ -134,6 +119,22 @@ public class RecurssionPractice {
 			//System.out.println();
 			return fabonacci(n-1)+fabonacci(n-2);
 		}
+		
+	}
+	
+	
+	/**
+	 * 
+	 * @param str: the using input string to check if it's palindrom or not.
+	 * @param index to go throgh the index of the str.
+	 * @return true if the str is palindrom otherwise return false.
+	 */
+	public static boolean plaindrom(String str, int index) {
+		if (index> str.length()/2) {
+			return true;
+		}
+		return (str.charAt(index)==str.charAt(str.length()-(1+index))) && plaindrom(str, index+1);
+		
 		
 	}
 }
