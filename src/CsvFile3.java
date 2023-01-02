@@ -33,7 +33,6 @@ public class CsvFile3 {
 		     BufferedWriter bw = new BufferedWriter(new FileWriter("data/output.txt"));
 		     
 		    String line;
-		    
 			while ((line= br.readLine())!= null) {
 		    		String uppercaseLine = line.toUpperCase();
 		    		bw.write (uppercaseLine);
