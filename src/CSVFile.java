@@ -49,7 +49,7 @@ public class CSVFile {
 		String Lid="";
 		for(String key: map.keySet()) {
 	    	System.out.println(Arrays.toString(map.get(key)));
-	    	key = Lid;
+	    	Lid = key ;
 	    }
 		  int newId = Integer.parseInt(Lid) + 1;
 		
